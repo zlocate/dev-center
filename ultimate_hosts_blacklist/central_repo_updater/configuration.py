@@ -54,7 +54,7 @@ class GitHub:  # pylint: disable=too-few-public-methods
         api_token = ""
 
     # Set the GitHub repository slug.
-    org_slug = "Ultimate-Hosts-Blacklist"
+    org_slug = "zlocated"
 
     # Set the list of URL we are working with.
     # Note: Every URL should ends with /.
@@ -74,9 +74,6 @@ class Infrastructure:  # pylint: disable=too-few-public-methods
     """
     Provide the configuration related to our infrastructure,
     """
-
-    # Set the list of links we are working with.
-    links = {"deploy": "https://hosts.ubuntu101.co.za/update_hosts.php"}
 
     # Set the list of repository we are going to ignore.
     repositories_to_ignore = [
@@ -342,23 +339,7 @@ fe80::1%lo0 localhost
 """
 
     # The README template.
-    readme_md = """# The Ultimate Hosts Blacklist for all Unix, Linux and Windows Operating Systems - Largest Unified Hosts File in the Universe
-
-![Unified Hosts File - Ultimate Hosts File blacklist consolidating hosts files from multiple well-curated and tested sources. Best Network Blocker to Protect your Children, Your Family and Yourself from accessing Bad Web Sites](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/ultimate-hosts-blacklist-logo.png)
-
-| Updated | Fueled By |
-| :-----: | :------: |
-| Daily :heavy_check_mark: | [<img src="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/ultimate-hosts-org-small.png" alt="Hosts File - Ultimate Hosts Blacklist"/>](https://github.com/Ultimate-Hosts-Blacklist) |
-| [![Build Status](https://travis-ci.org/mitchellkrogza/Ultimate.Hosts.Blacklist.svg?branch=master)](https://travis-ci.org/mitchellkrogza/Ultimate.Hosts.Blacklist) | [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/LICENSE.md) |
-
-The Ultimate Hosts Blacklist is undoubtedly the world's largest curated Unified Hosts file for protecting your computer or device against over several hundred thousand bad web sites. Use this Hosts File to protect your network, your children and your family from gaining access to millions of bad web sites. Protect your wifi network, computers and smartphone devices from being infected with Malware or Ransomware.
-
-Our hosts file is for use on any operating system to block bad domains out of your servers or devices. Information is gathered from multiple sources, tested regularly and merged into one massive hosts file and updated daily.
-
-[![Follow @ubuntu101za](https://img.shields.io/twitter/follow/ubuntu101za.svg?style=social&label=Follow)](https://twitter.com/ubuntu101za)
-
----
-
+    readme_md = """
 - Version: **%%version%%**
 - Total Bad Hosts in hosts file: **%%lenHosts%%**
 - Total Bad IP's in hosts.deny file: **%%lenIPs%%**
@@ -373,20 +354,6 @@ Click the link below to see all the sources used as input data to create this ho
 ### [SOURCES OF INPUT DATA USED TO CREATE THIS HOSTS FILE](#credits--thanks)
 
 ---
-
-## RAW FILE SOURCES
-
-The links below will direct you to the raw unzipped versions of the hosts files in this repo. (Files are updated daily)
-
-| File Name                  | Operating System |  Format  | Download Link                                                            |
-| -------------------------- | :--------------: | :------: | :----------------------------------------------------------------------- |
-| hosts                      |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/hosts)<br>                      |
-| hosts                      |     Windows      | CRLF/DOS | [Download](https://hosts.ubuntu101.co.za/hosts.windows)                  |
-| hosts.deny                 |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/hosts.deny)<br>                 |
-| superhosts.deny            |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/superhosts.deny)<br>            |
-| domains.list               |  Any / Pi-Hole   |   UNIX   | [Download](https://hosts.ubuntu101.co.za/domains.list)<br>               |
-| domains-dotted-format.list |     DnsMasq      |   UNIX   | [Download](https://hosts.ubuntu101.co.za/domains-dotted-format.list)<br> |
-| ips.list                   |  Any / Pi-Hole   |   UNIX   | [Download](https://hosts.ubuntu101.co.za/ips.list)                       |
 
 ### Installers, Updaters and Uninstaller Helper Scripts
 
@@ -472,11 +439,6 @@ To modify your current `hosts` file, look for it in the following places and mod
 
 ---
 
-## ADDITIONS / REMOVALS / CORRECTIONS !!
-
-[![Log an Issue](https://img.shields.io/badge/LOG%20-%20an%20issue%20%F0%9F%9A%A6-blue.svg)](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/issues) if you disagree with anything on this list or want to add any other bad web sites to the list.
-
----
 
 ## INFORMATION DATA SOURCES, COPYRIGHTS AND CREDITS
 
@@ -539,17 +501,6 @@ The sources of the input data information are as follows.
 
 ---
 
-## COLLABORATORS & CONTRIBUTORS
-
-- [Maravento](https://github.com/maravento)
-- [Nissar Chababy](https://github.com/funilrys)
-- [SMed79](https://github.com/SMed79)
-- [xxcriticxx](https://github.com/xxcriticxx)
-- [ZeroDot1](https://github.com/ZeroDot1)
-- [Mitchell Krog](https://github.com/mitchellkrogza)
-
----
-
 ## Some other awesome free projects
 
 - <https://github.com/dead-hosts>
@@ -567,32 +518,4 @@ The sources of the input data information are as follows.
 - <https://github.com/mitchellkrogza/Travis-CI-Nginx-for-Testing-Nginx-Configuration>
 
 ---
-
-## Help Support This Project 
-
-#### :sparkling_heart: Buy Mitchell a Coffee :point_down:
-[<img src="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/kofi5.png" alt="Buy Mitchell some Coffee" width="200"/>](https://ko-fi.com/mitchellkrog)
-
-#### :sparkling_heart: Buy Funilrys a Coffee :point_down:
-[<img src="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/kofi5.png" alt="Buy Funilrys some Coffee" width="200"/>](https://ko-fi.com/funilrys)
-
----
-
-### Into Photography?
-
-Come drop by and visit me at <https://mitchellkrog.com>
-
----
-
-# MIT License
-
-## Copyright (c) 2017, 2018 Mitchell Krog - mitchellkrog@gmail.com
-
-## <https://github.com/mitchellkrogza>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """

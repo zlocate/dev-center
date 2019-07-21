@@ -199,14 +199,13 @@ class Core:
         Generate.dotted(domains)
         Generate.plain_text_domain(domains)
         Generate.plain_text_ip(ips)
-        Generate.unix_hosts(domains)
-        Generate.windows_hosts(domains)
-        Generate.hosts_deny(ips)
-        Generate.superhosts_deny(domains + ips)
+        #Generate.unix_hosts(domains)
+        #Generate.windows_hosts(domains)
+        #Generate.hosts_deny(ips)
+        #Generate.superhosts_deny(domains + ips)
         Generate.readme_md(len(domains), len(ips))
 
         Clean()
 
         Deploy().github()
         sleep(3)
-        Deploy().hosts_ubuntu101_co_za()
